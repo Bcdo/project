@@ -1,6 +1,11 @@
 # Changelog
 
 
+## 1.0.3 - 2020-07-18
+### Added
+- Updated Readme
+- Updated package-lock.json
+
 ## 1.0.2 - 2020-07-08
 ### Added
 - License.md
