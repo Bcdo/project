@@ -1,5 +1,34 @@
 # Changelog
 
+## 2.0.0 - 2020-07-20 [unreleased]
+### Added
+- Add the scripts to the composer.json
+- Add the 'useProjectConfigFile' => true, to the general.php in config
+- Add the project.yaml from the projecttest
+- Add the plugin craftcms/aws-s3 to the composer.json
+- Add npm install on the read me
+- Add the config files from the projecttest.
+- Add/install redid and make the config work ?? ??
+- Added more to the webpack.settings.js pages section
+- Added purgecss path to the webpack.settings.js
+- Added sitemodule to the module folder
+
+### Changed
+- Change the project.yaml files schema version from 3.0.8 to 3.0.9
+- Change all the files that has projecttest to it, and write REPLACE_ME
+- Change the “REDIS_HOSTNAME=127.0.0.1”
+- Updated the env.example
+- Checked in the .env.example into git.
+- Gitignore .env.sh
+- Changed the order of step 2 and 3 in the build instructions, readme file
+- Changed the symlink favicon path in webpack.settings.js
+- Changed the workbox config swdest path in webpack.settings.js
+- Changed the exclude in the webpack.settings.js
+- Changed the runtimechaching in webpack.settings.js
+- Removed the importScripts script, in the webpack.settings.js
+
+### Fixed
+- Changed the #app to #page-container in src/js/app.js. This removed the javascript issue in webpack. See github solved issue #1
 
 ## 1.0.3 - 2020-07-18
 ### Added
