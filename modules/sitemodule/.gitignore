@@ -1,27 +1,16 @@
-
-
 # CRAFT ENVIRONMENT
-.env
+.env.php
 .env.sh
+.env
 
 # COMPOSER
-*/vendor/*
-
-# CRAFT STORAGE
-*/storage/*
-!*/storage/.gitkeep
-
-# ASSETS
-/web/assets/*
-/web/cpresources/*
+/vendor
 
 # BUILD FILES
-node_modules
-yarn-error.log
-npm-debug.log
-
-# TRANSCODER
-/web/transcoder/*
+/bower_components/*
+/node_modules/*
+/build/*
+/yarn-error.log
 
 # MISC FILES
 .cache
@@ -41,4 +30,3 @@ npm-debug.log
 !.vscode/extensions.json
 config.codekit3
 prepros-6.config
-.git
