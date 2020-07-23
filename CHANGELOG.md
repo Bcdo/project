@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.3 - 2020-07-18
+## 2.0.0 - 2020-07-20 [unreleased]
 ### Added
 - Add the scripts to the composer.json
 - Add the 'useProjectConfigFile' => true, to the general.php in config
@@ -11,6 +11,7 @@
 - Add/install redid and make the config work ?? ??
 - Added more to the webpack.settings.js pages section
 - Added purgecss path to the webpack.settings.js
+- Added sitemodule to the module folder
 
 ### Changed
 - Change the project.yaml files schema version from 3.0.8 to 3.0.9
@@ -25,6 +26,9 @@
 - Changed the exclude in the webpack.settings.js
 - Changed the runtimechaching in webpack.settings.js
 - Removed the importScripts script, in the webpack.settings.js
+
+### Fixed
+- Changed the #app to #page-container in src/js/app.js. This removed the javascript issue in webpack. See github solved issue #1
 
 ## 1.0.3 - 2020-07-18
 ### Added
