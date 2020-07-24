@@ -3,12 +3,13 @@
 ## 2.0.1 - 2020-07-24 [unreleased]
 
 ### Added
-- Added div on settings, sections fields etc. 
+- Added div on settings, sections fields etc.
 - Added a seed_dd.sql file in the scriptsfolder
 
 ### Updated
 - Changed language to en-GB
 - Renamed project site name to homepage.
+- Readme required tec.
 
 ### Fixed
 - Fixed schema version skew of craft system.
