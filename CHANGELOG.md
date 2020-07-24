@@ -10,6 +10,7 @@
 - Changed language to en-GB
 - Renamed project site name to homepage.
 - Readme required tec.
+- Readme build instructions
 
 ### Fixed
 - Fixed schema version skew of craft system.
