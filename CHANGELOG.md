@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.1 - 2020-07-24 [unreleased]
+## 2.2.0 - 2020-07-24
 
 ### Added
 - Added div on settings, sections fields etc.
