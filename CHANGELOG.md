@@ -1,6 +1,23 @@
 # Changelog
 
-## 2.0.0 - 2020-07-20 [unreleased]
+## 2.2.0 - 2020-07-24
+
+### Added
+- Added div on settings, sections fields etc.
+- Added a seed_dd.sql file in the scriptsfolder
+
+### Updated
+- Changed language to en-GB
+- Renamed project site name to homepage.
+- Readme required tec.
+- Readme build instructions
+
+### Fixed
+- Fixed schema version skew of craft system.
+- Base url site.
+
+
+## 2.0.0 - 2020-07-20
 ### Added
 - Add the scripts to the composer.json
 - Add the 'useProjectConfigFile' => true, to the general.php in config

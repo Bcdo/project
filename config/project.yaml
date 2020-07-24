@@ -1,23 +1,47 @@
-dateModified: 1595082324
+dateModified: 1595580665
 email:
   fromEmail: bjornar@noenreklame.no
   fromName: admin
+  replyToEmail: null
+  template: ''
+  transportSettings:
+    command: ''
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
-  94b4d5ac-d7ea-4241-a6cb-92b39f482f99:
+  1e90d02a-c0c4-4567-b346-020449aecd79:
+    name: Error
+  30709f5d-3519-472d-8340-b48451e87427:
     name: Common
-  d08a0d16-0e00-49e6-9cd4-465fa2d65d7d:
-    name: Errors
+  7970585d-b0d3-473e-b88a-e8a4e1d90dc3:
+    name: Images
 fields:
-  80a7a82a-1fe1-4b40-a618-ae44d7f5cc6f:
+  5aa84d0b-6386-43ee-bdbd-73d9346412c7:
     contentColumnType: text
-    fieldGroup: 94b4d5ac-d7ea-4241-a6cb-92b39f482f99
-    handle: optimizedimages
+    fieldGroup: 1e90d02a-c0c4-4567-b346-020449aecd79
+    handle: errorHeadline
     instructions: ''
-    name: optimizedImages
+    name: 'Error Headline'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  80573c97-7621-48c7-8d94-3dddfccdca00:
+    contentColumnType: text
+    fieldGroup: 7970585d-b0d3-473e-b88a-e8a4e1d90dc3
+    handle: optimizedImages
+    instructions: ''
+    name: 'Optimized Images'
     searchable: false
     settings:
-      displayDominantColorPalette: ''
+      displayDominantColorPalette: '1'
       displayLazyLoadPlaceholderImages: '1'
       displayOptimizedImageVariants: '1'
       variants:
@@ -120,62 +144,49 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: nystudio107\imageoptimize\fields\OptimizedImages
-  a5cb77be-c4d9-4d3e-88fb-d5384ca13941:
+  936d5c3d-d2fc-41cf-abdb-cc47c121f192:
     contentColumnType: string
-    fieldGroup: d08a0d16-0e00-49e6-9cd4-465fa2d65d7d
+    fieldGroup: 1e90d02a-c0c4-4567-b346-020449aecd79
     handle: errorImage
     instructions: ''
     name: 'Error Image'
     searchable: true
     settings:
+      allowSelfRelations: ''
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      defaultUploadLocationSource: 'volume:408f99a3-3b3a-4e7b-9779-088ca5dd6b96'
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
       restrictFiles: '1'
       selectionLabel: ''
-      singleUploadLocationSource: 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      singleUploadLocationSource: 'volume:408f99a3-3b3a-4e7b-9779-088ca5dd6b96'
       singleUploadLocationSubpath: ''
       source: null
       sources:
-        - 'volume:5c642d7e-b16b-4836-9575-668d75d242e5'
+        - 'volume:408f99a3-3b3a-4e7b-9779-088ca5dd6b96'
       targetSiteId: null
-      useSingleFolder: ''
+      useSingleFolder: false
       validateRelatedElements: ''
       viewMode: large
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  b8ba7115-3804-4c06-8a96-501963d1fc5c:
+  ce37128e-04a8-4b48-aa20-4cbe4eeca9cf:
     contentColumnType: text
-    fieldGroup: d08a0d16-0e00-49e6-9cd4-465fa2d65d7d
-    handle: errorHeadline
-    instructions: ''
-    name: 'Error Headline'
-    searchable: true
-    settings:
-      charLimit: ''
-      code: ''
-      columnType: text
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  e6d658aa-c335-4f15-bbcd-59fe05d9e913:
-    contentColumnType: text
-    fieldGroup: d08a0d16-0e00-49e6-9cd4-465fa2d65d7d
+    fieldGroup: 1e90d02a-c0c4-4567-b346-020449aecd79
     handle: errorText
     instructions: ''
     name: 'Error Text'
     searchable: true
     settings:
-      charLimit: ''
+      byteLimit: null
+      charLimit: null
       code: ''
-      columnType: text
+      columnType: null
       initialRows: '4'
       multiline: '1'
       placeholder: ''
@@ -184,7 +195,10 @@ fields:
     type: craft\fields\PlainText
 graphql:
   schemas:
-    052c436a-3fad-48b1-9ac6-04f38431e506:
+    6bbd47c7-b787-4070-b2e6-5c5a160a0ba1:
+      isPublic: true
+      name: 'Public Schema'
+    7f928e11-73a1-4704-8a52-1a81becf861e:
       isPublic: true
       name: 'Public Schema'
 plugins:
@@ -192,6 +206,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.2'
   fastcgi-cache-bust:
     edition: standard
     enabled: true
@@ -199,7 +217,6 @@ plugins:
   image-optimize:
     edition: standard
     enabled: true
-    licenseKey: null
     schemaVersion: 1.0.0
     settings:
       allowUpScaledImageVariants: false
@@ -251,12 +268,10 @@ plugins:
   retour:
     edition: standard
     enabled: true
-    licenseKey: null
     schemaVersion: 3.0.9
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: null
     schemaVersion: 3.0.9
   twigpack:
     edition: standard
@@ -269,33 +284,12 @@ plugins:
   webperf:
     edition: standard
     enabled: true
-    licenseKey: null
     schemaVersion: 1.0.1
 sections:
-  54e60257-f31a-44aa-960e-bbd364197e28:
+  5b25bdbf-d19f-4ecd-bae7-db11b349d944:
     enableVersioning: false
     entryTypes:
-      fb3a8f31-d1cc-4c13-903b-a501f7e51f54:
-        handle: homepage
-        hasTitleField: false
-        name: Homepage
-        sortOrder: 1
-        titleFormat: '{section.name|raw}'
-        titleLabel: null
-    handle: homepage
-    name: Homepage
-    propagationMethod: all
-    siteSettings:
-      5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
-        enabledByDefault: true
-        hasUrls: true
-        template: index
-        uriFormat: __home__
-    type: single
-  a72bfe0c-3389-4f9f-8ec1-ab318ec10b29:
-    enableVersioning: false
-    entryTypes:
-      faceb3ed-6771-453c-9c2a-aa330847f6db:
+      3cef9d16-36bc-4fd9-855e-3d2dbdb3c3c6:
         handle: errors
         hasTitleField: true
         name: Errors
@@ -306,31 +300,51 @@ sections:
     name: Errors
     propagationMethod: all
     siteSettings:
-      5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
+      fbb717e7-43b9-470b-9e3c-8a85eee0ccd0:
         enabledByDefault: true
         hasUrls: false
         template: null
-        uriFormat: null
+        uriFormat: ''
     type: channel
+  d01dd714-f689-45e1-a9ab-7ef5dfed7f97:
+    enableVersioning: false
+    entryTypes:
+      92e0121a-41bf-462d-ba1c-4e8becc82038:
+        handle: homepage
+        hasTitleField: false
+        name: Homepage
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: null
+    handle: homepage
+    name: Homepage
+    propagationMethod: all
+    siteSettings:
+      fbb717e7-43b9-470b-9e3c-8a85eee0ccd0:
+        enabledByDefault: true
+        hasUrls: true
+        template: index
+        uriFormat: __home__
+    type: single
 siteGroups:
-  f89601e9-4ba9-4a48-9e99-350aa9914912:
+  54a200df-d659-4f63-938b-7155675f8629:
     name: Default
 sites:
-  5da841b1-ca0d-46ff-8bb1-04d6c889ac54:
+  fbb717e7-43b9-470b-9e3c-8a85eee0ccd0:
     baseUrl: $SITE_URL
     handle: default
     hasUrls: true
-    language: en-US
+    language: en-GB
     name: Default
     primary: true
-    siteGroup: f89601e9-4ba9-4a48-9e99-350aa9914912
+    siteGroup: 54a200df-d659-4f63-938b-7155675f8629
     sortOrder: 1
 system:
   edition: pro
   live: true
   name: Craft
-  schemaVersion: 3.4.10
-  timeZone: America/New_York
+  schemaVersion: 3.4.11
+  timeZone: Europe/Berlin
 users:
   allowPublicRegistration: false
   defaultGroup: null
@@ -338,7 +352,7 @@ users:
   photoVolumeUid: null
   requireEmailVerification: true
 volumes:
-  5c642d7e-b16b-4836-9575-668d75d242e5:
+  408f99a3-3b3a-4e7b-9779-088ca5dd6b96:
     handle: site
     hasUrls: true
     name: Site
