@@ -7,6 +7,7 @@
 - Update in the readme file what to do before deployment, as well as how to deploy.
 - Update readme to include webpagetest api instructions
 - Set up a assets volume with the aws settings ready as example.
+- Set up Packagist, make it ready for composer
 
 
 
@@ -15,6 +16,7 @@
 ###Updated
 - Updated readme with login details.
 - Updated readme to include asset handling setup (s3, cloud, sharp)
+- Updated readme to include the webpagetest for webperf.
 
 ## [2.3.0] - 2020-07-25
 

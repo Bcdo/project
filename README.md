@@ -6,7 +6,7 @@
 
 
 ## Build instructions
-1. From developer folder, run the "composer create-project bcdo/project project_name"
+1. Download or clone the git, and unzip it into a project folder
 2. Add the site to Nitro, with "nitro add". If needed, start a new nitro machine with "nitro init -m machine name" first. If new machine was created all of the following nitro commands has to end with "-m nameOfMachine". For new machines, ssh into machine before installing craft, and run "sudo apt install composer -y && sudo apt install npm -y" then "sudo apt-get update -y && sudo apt-get install -y".
 3. Exit the vm and add new db to use for craft "nitro db add".
 4. Dublicate the .env.example into .env file, and replace all the REPLACE_ME parts. To get the IP run nitro info.
@@ -16,12 +16,8 @@
 8. Run "nitro db restart".
 9. Nitro ssh into the machine and run "composer install --no-scripts --optimize-autoloader"
 
-Optional
-10. Set up aws and cloudfront as explained at https://bit.ly/3g2ZcX8 , and populate the .env file accordingly. Remember the correct region, I use Stockholm which gives me the region of eu-north-1.
-11. Set up a image transform service for serverless image handling as explained at https://bit.ly/2ZYx9Cr
-12. Populate the .env file. 
 
-Thats it!
+Thats it! Further down you will find optional installs as well, but not required.
 
 To log in to craft, use the following admin details:
 User: bjornar@noenreklame.no
@@ -30,3 +26,11 @@ Password: letmein
 The database uses the Nitro default details.
 
 In the future, will have to work on making it even less complicated.
+
+## Optional
+### Asset handling
+10. Set up aws and cloudfront as explained at https://bit.ly/3g2ZcX8 , and populate the .env file accordingly. Remember the correct region, I use Stockholm which gives me the region of eu-north-1.
+11. Set up a image transform service for serverless image handling as explained at https://bit.ly/2ZYx9Cr
+12. Populate the .env file.
+### Pagetesting
+13. The webperf plugin gives you an optional to input a webpagetest api. Head over to webpagetest.org, get the free api key and populate the .env file.
