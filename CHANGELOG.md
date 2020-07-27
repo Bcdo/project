@@ -5,11 +5,18 @@
 - Scripts to do assed and db sync remote
 - Explore an atomic deployment solution
 - Update in the readme file what to do before deployment, as well as how to deploy.
-- Fix the missing php extenstions (imageoptimize)
-- Update readme to include aws setup (s3, cloud, sharp)
 - Update readme to include webpagetest api instructions
-- Update readme file to include the login details and passwords
-- Set up a assets volume with the aws settings ready as example. 
+- Set up a assets volume with the aws settings ready as example.
+- Set up Packagist, make it ready for composer
+
+
+
+## [2.3.1] - 2020-07-26
+
+###Updated
+- Updated readme with login details.
+- Updated readme to include asset handling setup (s3, cloud, sharp)
+- Updated readme to include the webpagetest for webperf.
 
 ## [2.3.0] - 2020-07-25
 
