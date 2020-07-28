@@ -6,6 +6,11 @@
 - Update in the readme file what to do before deployment, as well as how to deploy.
 - Set up a assets volume with the aws settings ready as example.
 
+## [2.3.3] - 2020-07-28
+
+### Updated
+- Readme change buil dinstruction to include composer
+- Added lisence to packagist, MIT. 
 
 ## [2.3.2] - 2020-07-28
 
@@ -16,7 +21,7 @@
 - Readme file to include sync script setup.
 - Gitignore .env.sh in scripts folder.  
 - Composer.json version, as well as readme url to pre-commit checklist.
-- Fixed packagist 
+- Fixed packagist
 
 ## [2.3.1] - 2020-07-26
 
