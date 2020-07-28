@@ -2,18 +2,24 @@
 
 ## [Unreleased]
 
-- Scripts to do assed and db sync remote
 - Explore an atomic deployment solution
 - Update in the readme file what to do before deployment, as well as how to deploy.
-- Update readme to include webpagetest api instructions
 - Set up a assets volume with the aws settings ready as example.
 - Set up Packagist, make it ready for composer
 
 
+## [2.3.2] - 2020-07-28
+
+### Added
+- Scripts folder for different tasks (such as db and asset sync, etc)
+
+### Updated
+- Readme file to include sync script setup.
+- Gitignore .env.sh in scripts folder.  
 
 ## [2.3.1] - 2020-07-26
 
-###Updated
+### Updated
 - Updated readme with login details.
 - Updated readme to include asset handling setup (s3, cloud, sharp)
 - Updated readme to include the webpagetest for webperf.
