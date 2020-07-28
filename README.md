@@ -6,7 +6,7 @@
 
 
 ## Build instructions
-1. Download or clone the git, and unzip it into a project folder
+1. From developer folder, run the "composer create-project bcdo/project project_name"
 2. Add the site to Nitro, with "nitro add". If needed, start a new nitro machine with "nitro init -m machine name" first. If new machine was created all of the following nitro commands has to end with "-m nameOfMachine". For new machines, ssh into machine before installing craft, and run "sudo apt install composer -y && sudo apt install npm -y" then "sudo apt-get update -y && sudo apt-get install -y".
 3. Exit the vm and add new db to use for craft "nitro db add".
 4. Dublicate the .env.example into .env file, and replace all the REPLACE_ME parts. To get the IP run nitro info.
@@ -40,4 +40,4 @@ In the future, will have to work on making it even less complicated.
 16. Create the .env.sh files for each environment, as this is ignored by git.
 Visit https://bit.ly/39xx4bW to understand the content of the scripts folder.
 ## Pre-commit checklist
-17. Follow https://bit.ly/2P0Gtzg to set up a custom pre-commit checklist for safe git commit, project based. 
+17. Follow https://bit.ly/2P0Gtzg to set up a custom pre-commit checklist for safe git commit, project based.
