@@ -42,3 +42,4 @@ npm-debug.log
 config.codekit3
 prepros-6.config
 .git
+/scripts/.env.sh

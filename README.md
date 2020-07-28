@@ -34,3 +34,10 @@ In the future, will have to work on making it even less complicated.
 12. Populate the .env file.
 ### Pagetesting
 13. The webperf plugin gives you an optional to input a webpagetest api. Head over to webpagetest.org, get the free api key and populate the .env file.
+### DB and Asset sync, and other scripts.
+14. In the scripts directory, duplicate the craft2-example.env.sh (for Craft 2.x projects) or craft3-example.env.sh (for Craft 3.x projects) file, and rename it to .env.sh.
+15. Edit the .env.sh files and replace REPLAC_ME with appropriate information.
+16. Create the .env.sh files for each environment, as this is ignored by git.
+Visit https://bit.ly/39xx4bW to understand the content of the scripts folder.
+## Pre-commit checklist
+17. Follow https://bit.ly/2P0Gtzg to set up a custom pre-commit checklist for safe git commit, project based. 
