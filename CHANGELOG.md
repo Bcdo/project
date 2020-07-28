@@ -6,11 +6,16 @@
 - Update in the readme file what to do before deployment, as well as how to deploy.
 - Set up a assets volume with the aws settings ready as example.
 
+## [2.3.4] - 2020-07-28
+
+### Fixed
+- Composer.json
+
 ## [2.3.3] - 2020-07-28
 
 ### Updated
 - Readme change buil dinstruction to include composer
-- Added lisence to packagist, MIT. 
+- Added lisence to packagist, MIT.
 
 ## [2.3.2] - 2020-07-28
 
