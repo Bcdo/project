@@ -1,9 +1,9 @@
 {
   "name": "bcdo/project",
   "description": "A scaffolding for projects",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "type": "project",
-  "license": "MIT"
+  "license": "MIT",
 
   "require": {
     "craftcms/cms": "^3.4.25",
