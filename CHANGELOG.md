@@ -16,6 +16,7 @@
 ### Updated
 - Readme file to include sync script setup.
 - Gitignore .env.sh in scripts folder.  
+- Composer.json version, as well as readme url to pre-commit checklist. 
 
 ## [2.3.1] - 2020-07-26
 
