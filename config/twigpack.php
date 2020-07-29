@@ -22,7 +22,7 @@
  * well, so you can have different settings groups for each environment, just as
  * you do for 'general.php'
  */
-
+use craft\helpers\App;
 return [
     // If `devMode` is on, use webpack-dev-server to all for HMR (hot module reloading)
     'useDevServer' => getenv('DEV_MODE'),

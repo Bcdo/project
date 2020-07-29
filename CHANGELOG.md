@@ -6,6 +6,25 @@
 - Update in the readme file what to do before deployment, as well as how to deploy.
 - Set up a assets volume with the aws settings ready as example.
 
+## [2.4.0] - 2020-07-29
+
+### Added
+- Added TypeScript support
+- Use Vue.js 3.0
+
+### Changed
+- Replaced moment with vanilla JavaScript
+- Replaced `getenv()` with `App::env()`
+- No longer use DSN for db connections
+- Switch from TSLint to ESLint
+- Disabled the ForkTS plugins for now.
+
+### Fixed
+- Fixed config path in the module `helpers/Config.php`
+
+### Updated
+- Readme visuals
+
 ## [2.3.4] - 2020-07-28
 
 ### Fixed

@@ -21,8 +21,9 @@
  * well, so you can have different settings groups for each environment, just as
  * you do for 'general.php'
  */
+use craft\helpers\App;
 
 return [
     // Enter the full absolute path to the FastCGI Cache directory.
-    'cachePath' => getenv('FAST_CGI_CACHE_PATH'),
+    'cachePath' => App::env('FAST_CGI_CACHE_PATH'),
 ];
