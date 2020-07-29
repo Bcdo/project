@@ -32,7 +32,7 @@ module.exports = {
         cssName: "styles"
     },
     entries: {
-        "app": "app.js"
+        "app": "app.ts"
     },
     babelLoaderConfig: {
         exclude: [
