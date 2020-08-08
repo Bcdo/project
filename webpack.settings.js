@@ -32,8 +32,9 @@ module.exports = {
         cssName: "styles"
     },
     entries: {
-        "app": "app.ts"
-    },
+          "app": "app.ts",
+          "lazysizes-wrapper": "utils/lazysizes-wrapper.ts",
+     },
     babelLoaderConfig: {
         exclude: [
             /(node_modules|bower_components)/

@@ -6,6 +6,11 @@
 - Update in the readme file what to do before deployment, as well as how to deploy.
 - Set up a assets volume with the aws settings ready as example.
 
+## [2.5.0] -
+
+### Added
+- Add native image lazy loading
+
 ## [2.4.0] - 2020-07-29
 
 ### Added
