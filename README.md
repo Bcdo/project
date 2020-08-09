@@ -8,7 +8,7 @@
 ## Build instructions
 1. From developer folder, run _"composer create-project bcdo/project project_name"_
 2. Add the site to Nitro, with _"nitro add"_. If needed, start a new nitro machine with _"nitro init -m machine name"_ first. If new machine was created all of the following nitro commands has to end with "-m nameOfMachine". For new machines, ssh into machine before installing craft, and run _"sudo apt install composer -y && sudo apt install npm -y"_ then _"sudo apt-get update -y && sudo apt-get install -y"_.
-3. Exit the vm and add new db to use for craft "nitro db add".
+3. Exit the vm and add new db to use for craft _"nitro db add"_.
 4. Duplicate the .env.example into .env file, and replace all the REPLACE_ME parts. To get the IP run nitro info.
 5. Nitro ssh and Cd into the root folder, and run _"composer install --no-scripts --optimize-autoloader --no-interaction"_, and _"npm install"_. When finished run _"npm run debug"_ in a new terminal - Check if everything compiles properly.
 6. Run the "./craft setup", and go through the installation.
