@@ -6,10 +6,16 @@
 - Update in the readme file what to do before deployment, as well as how to deploy.
 - Set up a assets volume with the aws settings ready as example.
 
-## [2.5.0] -
+## [2.5.0] - 2020-08-08
 
 ### Added
 - Add native image lazy loading
+
+### Fixed
+- Paths in tsconfig.json
+
+### Updated
+- Craft and plugin update. 
 
 ## [2.4.0] - 2020-07-29
 

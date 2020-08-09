@@ -18,7 +18,7 @@
     "nystudio107/craft-webperf": "^1.0.0",
     "nystudio107/craft-twigpack": "^1.1.0",
     "nystudio107/dotenvy": "^1.1.0",
-    "ostark/craft-async-queue": "^1.3.0",
+    "ostark/craft-async-queue": "^2.1.1",
     "craftcms/aws-s3": "^1.2.8"
   },
   "require-dev": {
