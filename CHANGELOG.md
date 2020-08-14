@@ -2,9 +2,24 @@
 
 ## [Unreleased]
 
-- Explore an atomic deployment solution
 - Update in the readme file what to do before deployment, as well as how to deploy.
-- Set up a assets volume with the aws settings ready as example.
+- Set up a assets volume with the aws settings ready as example, export new seed_db. 
+
+## [2.5.1] - 2020-08-14
+
+### Added
+- Added `--no-tablespaces` to the mysqldump command options to work around changes in MySQL
+
+### Fixed
+- Modern config only for local dev, [fixing multi-compiler issues](https://github.com/webpack/webpack-dev-server/issues/2355) with HRM
+- Fix redis session config to use `App::sessionConfig()`
+
+### Changed
+- Remove `[hash]` from dev config to eliminate potential [memory errors](https://github.com/webpack/webpack-dev-server/issues/438)
+- Use `[contenthash]` in production instead of [hash or chunkhash](https://github.com/webpack/webpack.js.org/issues/2096)
+
+### Updated
+- Readme file to give proper credit
 
 ## [2.5.0] - 2020-08-09
 

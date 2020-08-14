@@ -43,7 +43,7 @@ const configureImageLoader = () => {
             {
                 loader: 'file-loader',
                 options: {
-                    name: 'img/[name].[hash].[ext]'
+                    name: 'img/[name].[ext]'
                 }
             }
         ]
@@ -64,7 +64,6 @@ const configurePostcssLoader = () => {
             {
                 loader: 'css-loader',
                 options: {
-                    url: false,
                     importLoaders: 2,
                     sourceMap: true
                 }
@@ -75,7 +74,10 @@ const configurePostcssLoader = () => {
             {
                 loader: 'postcss-loader',
                 options: {
-                    sourceMap: true
+                    sourceMap: true,
+                    config: {
+                        path: path.resolve(__dirname),
+                    }
                 }
             }
         ]
@@ -87,7 +89,7 @@ module.exports = merge(
     common.modernConfig,
     {
         output: {
-            filename: path.join('./js', '[name].[hash].js'),
+            filename: path.join('./js', '[name].js'),
             publicPath: settings.devServerConfig.public() + '/',
         },
         mode: 'development',
