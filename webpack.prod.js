@@ -79,22 +79,6 @@ const configureBanner = () => {
     }
 };
 
-// Configure Bundle Analyzer
-const configureBundleAnalyzer = (buildType) => {
-    if (buildType === LEGACY_CONFIG) {
-        return {
-            analyzerMode: 'static',
-            reportFilename: 'report-legacy.html',
-        };
-    }
-    if (buildType === MODERN_CONFIG) {
-        return {
-            analyzerMode: 'static',
-            reportFilename: 'report-modern.html',
-        };
-    }
-};
-
 // Configure Compression webpack plugin
 const configureCompression = () => {
     return {
@@ -111,6 +95,22 @@ const configureCompression = () => {
             return zopfli.gzip(input, compressionOptions, callback);
         }
     };
+};
+
+// Configure Bundle Analyzer
+const configureBundleAnalyzer = (buildType) => {
+    if (buildType === LEGACY_CONFIG) {
+        return {
+            analyzerMode: 'static',
+            reportFilename: 'report-legacy.html',
+        };
+    }
+    if (buildType === MODERN_CONFIG) {
+        return {
+            analyzerMode: 'static',
+            reportFilename: 'report-modern.html',
+        };
+    }
 };
 
 // Configure Critical CSS
@@ -167,7 +167,7 @@ const configureImageLoader = (buildType) => {
                 {
                     loader: 'file-loader',
                     options: {
-                        name: 'img/[name].[hash].[ext]'
+                        name: 'img/[name].[contenthash].[ext]'
                     }
                 }
             ]
@@ -180,7 +180,7 @@ const configureImageLoader = (buildType) => {
                 {
                     loader: 'file-loader',
                     options: {
-                        name: 'img/[name].[hash].[ext]'
+                        name: 'img/[name].[contenthash].[ext]'
                     }
                 },
                 {
@@ -274,6 +274,9 @@ const configurePostcssLoader = (buildType) => {
                 {
                     loader: 'postcss-loader',
                     options: {
+                        config: {
+                            path: path.resolve(__dirname),
+                        },
                         sourceMap: true
                     }
                 }
@@ -349,7 +352,7 @@ module.exports = [
         common.legacyConfig,
         {
             output: {
-                filename: path.join('./js', '[name]-legacy.[chunkhash].js'),
+                filename: path.join('./js', '[name]-legacy.[contenthash].js'),
             },
             mode: 'production',
             devtool: 'source-map',
@@ -363,7 +366,7 @@ module.exports = [
             plugins: [
                 new MiniCssExtractPlugin({
                     path: path.resolve(__dirname, settings.paths.dist.base),
-                    filename: path.join('./css', '[name].[chunkhash].css'),
+                    filename: path.join('./css', '[name].[contenthash].css'),
                 }),
                 new PurgecssPlugin(
                     configurePurgeCss()
@@ -377,15 +380,15 @@ module.exports = [
                 new WebappWebpackPlugin(
                     configureWebapp()
                 ),
+                new CompressionPlugin(
+                    configureCompression()
+                ),
                 new CreateSymlinkPlugin(
                     settings.createSymlinkConfig,
                     true
                 ),
                 new SaveRemoteFilePlugin(
                     settings.saveRemoteFileConfig
-                ),
-                new CompressionPlugin(
-                    configureCompression()
                 ),
                 new BundleAnalyzerPlugin(
                     configureBundleAnalyzer(LEGACY_CONFIG),
@@ -399,7 +402,7 @@ module.exports = [
         common.modernConfig,
         {
             output: {
-                filename: path.join('./js', '[name].[chunkhash].js'),
+                filename: path.join('./js', '[name].[contenthash].js'),
             },
             mode: 'production',
             devtool: 'source-map',

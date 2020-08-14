@@ -1,5 +1,8 @@
 # NOEN Reklamebyrå scaffolding
 
+## What is this?
+This is a Craft CMS scaffolding project based on the nystudio107´s docker scaffolding. I needed it to work with vm instead of docker, so I have adjusted it to be used with Craft Nitro. Before trying to use this, make sure you install Nitro first. I will keep updating this project based on my own preferences, as well as follow ups on nystudio107´s updates. 
+
 ## Required Technology Stack
 - Craft Nitro
 - PHP 7.4
