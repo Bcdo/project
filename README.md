@@ -10,15 +10,18 @@ This is a Craft CMS scaffolding project based on the nystudio107´s docker scaff
 
 ## Build instructions
 1. From developer folder, run _"composer create-project bcdo/project project_name"_
-2. Add the site to Nitro, with _"nitro add"_. If needed, start a new nitro machine with _"nitro init -m machineName"_ first. If new machine was created all of the following nitro commands has to end with "-m nameOfMachine". For new machines, ssh into machine before installing craft, and run _"sudo apt install composer -y && sudo apt install npm -y"_ then _"sudo apt-get update -y && sudo apt-get install -y"_.
-3. Exit the vm and add new db to use for craft _"nitro db add"_.
-4. Duplicate the .env.example into .env file, and replace all the REPLACE_ME parts. To get the IP run nitro info.
-5. Nitro ssh and Cd into the root folder, and run _"composer install --no-scripts --optimize-autoloader --no-interaction"_, and _"npm install"_. When finished run _"npm run debug"_ in a new terminal - Check if everything compiles properly.
-6. Run the _"./craft setup"_, and go through the installation.
-7. Exit the vm and cd into the scripts folder. Run _"nitro db import seed_db.sql"_, and choose the same name as when you created the db in step 3. This will seed the db properly.
-8. Run "nitro db restart".
-9. Nitro ssh into the machine and run _"composer install --no-scripts --optimize-autoloader"_ from root folder. 
 
+2. Add the site to Nitro, with _"nitro add"_. If needed, start a new nitro machine with _"nitro init -m machineName"_ first. If new machine was created all of the following nitro commands has to end with "-m nameOfMachine". For new machines, ssh into machine and run _"sudo apt install composer -y && sudo apt install npm -y"_ then _"sudo apt-get update -y && sudo apt-get install -y"_.
+
+3. Exit the vm and duplicate the .env.example into .env file, and replace all the REPLACE_ME parts. To get the IP run nitro info. Remember the name of the database for the next step.
+
+4. Cd into the scripts folder. Run _"nitro db import seed_db.sql"_, and name it the same as in the .env file. This will seed the db properly.
+
+5. Nitro ssh and Cd into the root folder, and run _"composer install --no-scripts --optimize-autoloader --no-interaction"_, and _"npm install"_. When finished run _"npm run debug"_ in a new terminal - Check if everything compiles properly and keep it running in the background.
+
+6. Exit the vm again and run _"nitro db restart"_.
+
+7. Nitro ssh into the machine and run _"./craft setup"_ from root folder, and follow the instructions. To finish off, you can also run _"composer update"_.
 
 Thats it! Further down you will find optional installs as well, but not required.
 

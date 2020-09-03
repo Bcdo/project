@@ -10,6 +10,7 @@
 ### Added
 - Added a ´queue´component with a longer ´ttr´
 - Added the missing body-js.twig file in boilerplate.
+- App id in .env.example file.
 
 ### Changed
 - Changed `project-config/sync` -> `project-config/apply`
@@ -18,7 +19,8 @@
 
 ### Updated
 - Readme file.
-- Php version in composer.json
+- Php version in composer.json.
+- Updated and improved the building instructions. 
 
 ### Removed
 - Phased out example.env.sh files, craft version spesific.
