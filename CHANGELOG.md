@@ -3,7 +3,27 @@
 ## [Unreleased]
 
 - Update in the readme file what to do before deployment, as well as how to deploy.
-- Set up a assets volume with the aws settings ready as example, export new seed_db. 
+- Set up a assets volume with the aws settings ready as example, export new seed_db.
+
+## [2.5.2] - 2020-09-03
+
+### Added
+- Added a ´queue´component with a longer ´ttr´
+- Added the missing body-js.twig file in boilerplate.
+- App id in .env.example file.
+
+### Changed
+- Changed `project-config/sync` -> `project-config/apply`
+- Refactor composer scripts to handle Craft not being installed, leveraging craft `install/check`
+- Boilerplate now requires `craftcms/cms` `^3.5.8`
+
+### Updated
+- Readme file.
+- Php version in composer.json.
+- Updated and improved the building instructions. 
+
+### Removed
+- Phased out example.env.sh files, craft version spesific.
 
 ## [2.5.1] - 2020-08-14
 
