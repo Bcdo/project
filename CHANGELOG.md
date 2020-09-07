@@ -5,6 +5,17 @@
 - Update in the readme file what to do before deployment, as well as how to deploy.
 - Set up a assets volume with the aws settings ready as example, export new seed_db.
 
+## [2.5.3] - 2020-09-07
+
+### Changed
+- Remove the use of `craft on` and `craft off` because they create pointless `dateUpdated` changes to `project.yaml`
+- Updated the `css-loader` config to ignore embedded URLs
+- Changed `project-config/sync` -> `project-config/apply`
+
+### Added
+- Added the default `DB_PORT` of `3306` to `example.env` and `example.env.sh`
+
+
 ## [2.5.2] - 2020-09-03
 
 ### Added
@@ -20,7 +31,7 @@
 ### Updated
 - Readme file.
 - Php version in composer.json.
-- Updated and improved the building instructions. 
+- Updated and improved the building instructions.
 
 ### Removed
 - Phased out example.env.sh files, craft version spesific.
