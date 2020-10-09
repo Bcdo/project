@@ -5,7 +5,7 @@
 - Update in the readme file what to do before deployment, as well as how to deploy.
 - Set up a assets volume with the aws settings ready as example, export new seed_db.
 
-## [] - 2020-
+## [2.5.4] - 2020-10-09
 
 ### Changed
 - Removed `dotenvy`
