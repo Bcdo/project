@@ -5,6 +5,14 @@
 - Update in the readme file what to do before deployment, as well as how to deploy.
 - Set up a assets volume with the aws settings ready as example, export new seed_db.
 
+## [] - 2020-
+
+### Changed
+- Removed `dotenvy`
+- Removed repo.repman.io from repositories
+- Explicitly set `id` from APP_ID and use `keyPrefix` for cache component
+- Changed the autoload at `composer.json`
+
 ## [2.5.3] - 2020-09-07
 
 ### Changed
