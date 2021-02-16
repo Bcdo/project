@@ -1,3 +1,6 @@
+# DEPRECATED
+This is no longer maintained, and is adviced to not be used. The new nitro and nitro versions coming will all be docker based. This repo was a workaround to get up and running on the nitro multipass solution. Now, there will be no need if nitro is the preferred dev enviroment. 
+
 # NOEN Reklamebyrå scaffolding
 
 ## What is this?
